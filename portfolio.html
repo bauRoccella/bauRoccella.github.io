@@ -3,174 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LNU: 1156558 Roccella Bautista</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-            color: #333;
-            padding: 20px;
-        }
-
-        header {
-            background-color: #2c3e50;
-            padding: 20px;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        header nav ul {
-            list-style: none;
-        }
-
-        header nav ul li {
-            display: inline;
-            margin: 0 10px;
-        }
-
-        header nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        section {
-            margin-bottom: 40px;
-        }
-
-        h1, h2, h3 {
-            margin-bottom: 20px;
-            color: #2c3e50;
-        }
-
-        h2 {
-            margin-top: 20px;
-            font-size: 28px;
-        }
-
-        h3 {
-            margin-bottom: 15px;
-            font-size: 24px;
-        }
-
-        p {
-            margin-bottom: 15px;
-        }
-
-        ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-
-        ul li {
-            margin-bottom: 10px;
-        }
-
-        .cv-online ul {
-            list-style-type: disc;
-            margin-left: 40px;
-        }
-
-        .project {
-            margin-bottom: 20px;
-        }
-
-        blockquote {
-            font-style: italic;
-            color: #555;
-            margin-left: 20px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #2c3e50;
-            color: white;
-            margin-top: 40px;
-        }
-
-        form {
-            display: grid;
-            gap: 10px;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-
-        form label {
-            font-weight: bold;
-        }
-
-        form input, form textarea {
-            padding: 10px;
-            font-size: 16px;
-            width: 100%;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        form button {
-            background-color: #3498db;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        form button:hover {
-            background-color: #2980b9;
-        }
-
-        a {
-            color: #3498db;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Portafolio - Bautista Roccella</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<style>
+    .projects-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="about.html">Sobre mí</a></li>
-                <li><a href="portfolio.html">Portafolio</a></li>
-                <li><a href="cv.html">Curriculum</a></li>
-                <li><a href="testimonies.html">Testimonios</a></li>
-                <li><a href="contact.html">Contacto</a></li>
-                <li><a href="skills.html">Habilidades</a></li>
-                <li><a href="certifications.html">Certificaciones</a></li>
-            </ul>
-        </nav>
-    </header>
+    .project {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 16px;
+    }
+</style>
 
-    <section>
-        <h2>Portafolio</h2>
+<header class="header">
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Inicio</a></li>
+            <li><a href="about.html" class="nav-link">Sobre mí</a></li>
+            <li><a href="portfolio.html" class="nav-link">Portafolio</a></li>
+            <li><a href="cv.html" class="nav-link">Curriculum</a></li>
+            <li><a href="testimonies.html" class="nav-link">Testimonios</a></li>
+            <li><a href="contact.html" class="nav-link">Contacto</a></li>
+            <li><a href="skills.html" class="nav-link">Habilidades</a></li>
+            <li><a href="certifications.html" class="nav-link">Certificaciones</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="container">
+    <h2>Portafolio</h2>
+    <div class="projects-container">
         <div class="project"> 
-            <h3>Practica de patrones de diseño</h3>
-            <p>Para este trabajo un compañero mio y yo diseñamos una solución diagramada y después la pasamos a código en Java</p>
+            <h3>Práctica de Patrones de Diseño</h3>
+            <p>Diseñamos una solución diagramada y luego la convertimos a código en Java.</p>
             <a href="https://github.com/manupereiro/tpo-pds.git">Ver Proyecto</a>
         </div>
         <div class="project">
             <h3>Proyecto Base de Datos 2</h3>
-            <p>Creamos una página y la conectamos a dos bases de datos no relacionales utilizando SpringBoot</p>
+            <p>Creamos una página conectada a bases de datos no relacionales utilizando SpringBoot.</p>
             <a href="https://github.com/MassiB09/tpo-db2.git">Ver Proyecto</a>
         </div>
-    </section>
+        <div class="project">
+            <h3>Circo Maravillas</h3>
+            <p>Funcione como maqueteador con un grupo para completar una tarea de la materia de Diseño y Desarrollo Web.</p>
+            <a href="https://github.com/fmoix/circomaravillas">Ver Proyecto</a>
+        </div>
+        <div class="project">
+            <h3>EvoSoft</h3>
+            <p>Con un grupo de compañeros creamos la página de una Desarrolladora de Software integrada por nosotros.</p>
+            <a href="https://github.com/fmoix/circomaravillas">Ver Proyecto</a>
+        </div>
+    </div>
+</section>
 
-    <footer>
+    <footer class="footer">
         <p>Sígueme en <a href="https://www.linkedin.com/in/bautistaroccella/">LinkedIn</a> | <a href="https://github.com/bauRoccella">GitHub</a></p>
     </footer>
 
 </body>
+</html>
