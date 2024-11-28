@@ -1,5 +1,4 @@
 html, body {
-    height: 100%;
     margin: 0;
     padding: 0;
     display: flex;
@@ -44,7 +43,7 @@ h1, h2 {
 }
 
 .nav-link:hover {
-    background-color: #005bb5;
+    background-color: #01d0a7;
     border-radius: 5px;
 }
 
@@ -64,8 +63,8 @@ h1, h2 {
     padding: 1.5rem;
     border: 1px solid #ddd;
     border-radius: 8px;
-    max-width: 500px;
     margin: 0 auto;
+    width:30rem;
 }
 
 .contact-form input,
@@ -110,7 +109,8 @@ h1, h2 {
     border-radius: 8px;
     padding: 10px;
     background-color: #f9f9f9;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 800px;
     margin: 2rem auto; 
 }
+
+

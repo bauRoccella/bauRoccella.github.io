@@ -11,13 +11,18 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
+        transition: background-color 0.6s ease;        
     }
 
     .project {
         border: 1px solid #ccc;
         border-radius: 8px;
-        padding: 16px;
+        padding: 0 16px 16px 16px;
     }
+
+    .project:hover {
+    background-color: #a9c4bf; /* Ajusta el color según tus preferencias */
+}
 </style>
 
 <header class="header">
@@ -57,6 +62,16 @@
             <h3>EvoSoft</h3>
             <p>Con un grupo de compañeros creamos la página de una Desarrolladora de Software integrada por nosotros.</p>
             <a href="https://github.com/fmoix/circomaravillas">Ver Proyecto</a>
+        </div>
+        <div class="project">
+            <h3>El Rincón del Gamer</h3>
+            <p>Diseñe y programe el front-end en este repositorio.</p>
+            <a href="https://github.com/bauRoccella/rincon-del-gamer">Ver Proyecto</a>
+        </div>
+        <div class="project">
+            <h3>Estudio Juridico</h3>
+            <p>Acotada actividad para la materia Diseño y Desarrollo Web.</p>
+            <a href="https://github.com/bauRoccella/estudio-juridico">Ver Proyecto</a>
         </div>
     </div>
 </section>
