@@ -18,6 +18,9 @@
 
     <header class="header">
         <nav>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                &#9776;
+            </button>
             <ul class="nav-links">
                 <li><a href="index.html" class="nav-link">Inicio</a></li>
                 <li><a href="about.html" class="nav-link">Sobre mí</a></li>
@@ -64,6 +67,23 @@
 <footer class="footer">
     <p>Sígueme en <a href="https://www.linkedin.com/in/bautistaroccella/"><i class="fab fa-linkedin"></i></a><a href="https://github.com/bauRoccella"><i class="fab fa-github"></i></a></p>
 </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+    
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+                navLinks.classList.remove('active');
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
