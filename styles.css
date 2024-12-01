@@ -97,7 +97,6 @@ h1, h2 {
 }
 
 .footer {
-    position: sticky;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -105,6 +104,9 @@ h1, h2 {
     background: linear-gradient(to bottom, #28ce8b, #10ab8d);
     color: #fff;
     padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+
 }
 
 
@@ -130,7 +132,7 @@ h1, h2 {
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 10px;
-    background-color: #f4f4f9;
+    background-color: #f9f9f9;
     
     max-width: 800px;
     margin: 2rem auto; 
@@ -140,7 +142,7 @@ h1, h2 {
     max-width: 600px;
     margin: auto;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: #f9f9f9;
   }
   
   .skill {
@@ -183,4 +185,5 @@ h1, h2 {
   .footer a{
     color: whitesmoke;
     padding: 0px 3px 0px 3px;
+
   }
