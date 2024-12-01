@@ -7,6 +7,15 @@ html, body {
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f9;
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+main {
+    flex: 1;
 }
 
 h1, h2 {
@@ -88,12 +97,16 @@ h1, h2 {
 }
 
 .footer {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     text-align: center;
     background: linear-gradient(to bottom, #28ce8b, #10ab8d);
     color: #fff;
     padding: 1rem 0;
-    margin-top: 2rem;
 }
+
 
 .footer a {
     color: #0073e6;
@@ -113,4 +126,61 @@ h1, h2 {
     margin: 2rem auto; 
 }
 
+.big-box {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f4f4f9;
+    
+    max-width: 800px;
+    margin: 2rem auto; 
+}
 
+.skills-box {
+    max-width: 600px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+  }
+  
+  .skill {
+    margin-bottom: 20px;
+  }
+  
+  .skill p {
+    margin: 0 0 5px 0;
+    font-weight: bold;
+  }
+  
+  .skill-bar {
+    width: 100%;
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+    position: relative;
+  }
+  
+  .skill-level {
+    height: 100%;
+    background: #28a745;
+    border-radius: 5px 0 0 5px;
+    transition: width 0.5s ease-in-out;
+  }
+  
+  .skill span {
+    display: inline-flex; /* Asegura una alineación adecuada */
+    align-items: center;
+    gap: 0.5rem; /* Espaciado entre el ícono y el texto */
+  }
+  
+  .skill span svg {
+    height: 1.5rem; /* Cambia el tamaño del ícono */
+    width: 1.5rem;
+    fill: lightblue; /* Cambia el color del ícono según el texto */
+  }
+
+  .footer a{
+    color: whitesmoke;
+    padding: 0px 3px 0px 3px;
+  }
