@@ -33,7 +33,7 @@
   <header class="header">
     <nav>
         <button class="menu-toggle" aria-label="Abrir menú">
-            &#9776; <!-- Símbolo de hamburguesa -->
+            &#9776;
         </button>
         <ul class="nav-links">
             <li><a href="index.html" class="nav-link">Inicio</a></li>
@@ -124,7 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.classList.toggle('active');
     });
 
-    // Cerrar el menú si se hace clic fuera
     document.addEventListener('click', (e) => {
         if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
             navLinks.classList.remove('active');

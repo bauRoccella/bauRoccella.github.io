@@ -14,77 +14,75 @@
         <link rel="manifest" href="icons/site.webmanifest">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     </head>
-<style>
-    .projects-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-        transition: background-color 0.6s ease;        
-    }
 
-    .project {
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        padding: 0 16px 16px 16px;
-    }
 
-    .project:hover {
-    background-color: #a9c4bf; /* Ajusta el color según tus preferencias */
-}
-</style>
-
-<header class="header">
-    <nav>
-        <ul class="nav-links">
-            <li><a href="index.html" class="nav-link">Inicio</a></li>
-            <li><a href="about.html" class="nav-link">Sobre mí</a></li>
-            <li><a href="portfolio.html" class="nav-link">Portafolio</a></li>
-            <li><a href="cv.html" class="nav-link">Curriculum</a></li>
-            <li><a href="testimonies.html" class="nav-link">Testimonios</a></li>
-            <li><a href="contact.html" class="nav-link">Contacto</a></li>
-            <li><a href="skills.html" class="nav-link">Habilidades</a></li>
-            <li><a href="certifications.html" class="nav-link">Certificaciones</a></li>
-        </ul>
-    </nav>
-</header>
+    <header class="header">
+        <nav>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                &#9776;
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="about.html" class="nav-link">Sobre mí</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portafolio</a></li>
+                <li><a href="cv.html" class="nav-link">Curriculum</a></li>
+                <li><a href="testimonies.html" class="nav-link">Testimonios</a></li>
+                <li><a href="contact.html" class="nav-link">Contacto</a></li>
+                <li><a href="skills.html" class="nav-link">Habilidades</a></li>
+                <li><a href="certifications.html" class="nav-link">Certificaciones</a></li>
+            </ul>
+        </nav>
+    </header>
 
 <main><section class="container">
     <h2>Portafolio</h2>
     <div class="projects-container">
-        <div class="project"> 
+        <div class="project">
             <h3>Práctica de Patrones de Diseño</h3>
-            <p>Diseñamos una solución diagramada y luego la convertimos a código en Java.</p>
-            <a href="https://github.com/manupereiro/tpo-pds.git">Ver Proyecto</a>
+            <p>Graficamos algunos de los patrones de diseño vistos durante el cuatrimestre y luego los convertimos a código de Java.</p>
+            <button class="btn-proyecto" data-url='https://github.com/manupereiro/tpo-pds.git';>
+                Ver Proyecto
+            </button>
+            
         </div>
         <div class="project">
             <h3>Proyecto Base de Datos 2</h3>
             <p>Creamos una página conectada a bases de datos no relacionales utilizando SpringBoot.</p>
-            <a href="https://github.com/MassiB09/tpo-db2.git">Ver Proyecto</a>
+            <button class="btn-proyecto" data-url='https://github.com/MassiB09/tpo-db2.git';>
+                Ver Proyecto
+            </button>
         </div>
         <div class="project">
             <h3>Circo Maravillas</h3>
             <p>Funcione como maqueteador con un grupo para completar una tarea de la materia de Diseño y Desarrollo Web.</p>
-            <a href="https://github.com/fmoix/circomaravillas">Ver Proyecto</a>
+            <button class="btn-proyecto" data-url='https://github.com/fmoix/circomaravillas';>
+                Ver Proyecto
+            </button>
         </div>
         <div class="project">
             <h3>EvoSoft</h3>
             <p>Con un grupo de compañeros creamos la página de una Desarrolladora de Software integrada por nosotros.</p>
-            <a href="https://github.com/fmoix/circomaravillas">Ver Proyecto</a>
+            <button class="btn-proyecto" data-url='https://github.com/fmoix/circomaravillas';>
+                Ver Proyecto
+            </button>
         </div>
         <div class="project">
             <h3>El Rincón del Gamer</h3>
             <p>Diseñe y programé el front-end en este repositorio.</p>
-            <a href="https://github.com/bauRoccella/rincon-del-gamer">Ver Proyecto</a>
+            <button class="btn-proyecto" data-url='https://github.com/bauRoccella/rincon-del-gamer';>
+                Ver Proyecto
+            </button>
         </div>
         <div class="project">
             <h3>Estudio Juridico</h3>
             <p>Acotada actividad para la materia Diseño y Desarrollo Web.</p>
-            <a href="https://github.com/bauRoccella/estudio-juridico">Ver Proyecto</a>
+            <button class="btn-proyecto" data-url='https://github.com/bauRoccella/estudio-juridico';>
+                Ver Proyecto
+            </button>
         </div>
         <div class="project">
             <h3>CV Web</h3>
             <p>Este mismo curriculum jaja!</p>
-            <a href="https://bauroccella.github.io/portfolio.html">Ver Proyecto</a>
         </div>
     </div>
 </section></main>
@@ -92,6 +90,40 @@
 <footer class="footer">
     <p>Sígueme en <a href="https://www.linkedin.com/in/bautistaroccella/"><i class="fab fa-linkedin"></i></a><a href="https://github.com/bauRoccella"><i class="fab fa-github"></i></a></p>
 </footer>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    // Selecciona todos los botones con la clase 'btn-proyecto'
+    const botones = document.querySelectorAll('.btn-proyecto');
+
+    // Añade un evento click a cada botón
+    botones.forEach((boton) => {
+        boton.addEventListener('click', () => {
+            const url = boton.getAttribute('data-url'); // Obtén la URL del atributo 'data-url'
+            if (url) {
+                window.open(url, '_blank'); // Abre la URL en una nueva pestaña
+            }
+        });
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+            navLinks.classList.remove('active');
+        }
+    });
+});
+</script>
 
 </body>
 </html>

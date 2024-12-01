@@ -15,23 +15,14 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     </head>
 
-<style>
-    .testimonies-box {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-    .testimonies-box blockquote {
-    padding: 10px;
-    border-left: 5px solid #17c2bf;
-}
-</style>
 
 <body>
 
     <header class="header">
         <nav>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                &#9776;
+            </button>
             <ul class="nav-links">
                 <li><a href="index.html" class="nav-link">Inicio</a></li>
                 <li><a href="about.html" class="nav-link">Sobre mí</a></li>
@@ -44,6 +35,7 @@
             </ul>
         </nav>
     </header>
+
 <main>    <h2>Testimonios</h2>
     <section class="container testimonies-box">
         <blockquote>"Sólido" - Manuel Pereiro</blockquote>
@@ -64,6 +56,24 @@
     <footer class="footer">
         <p>Sígueme en <a href="https://www.linkedin.com/in/bautistaroccella/"><i class="fab fa-linkedin"></i></a><a href="https://github.com/bauRoccella"><i class="fab fa-github"></i></a></p>
     </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+        
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        
+            document.addEventListener('click', (e) => {
+                if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+            </script>
 
 </body>
 </html>
